@@ -1,0 +1,21 @@
+{
+  "name": "express-nodejs-typescript-serverless-scaffold",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "author": "Yogeshwar Chaudhari",
+  "scripts": {
+    "start": "rm -r ./dist; tsc; sls offline start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "serverless-http": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.0",
+    "serverless-offline": "^8.8.0"
+  }
+}
