@@ -104,3 +104,13 @@ serverless offline
 ```
 
 To learn more about the capabilities of `serverless-offline`, please refer to its [GitHub repository](https://github.com/dherault/serverless-offline).
+
+### Connecting to MongoDB
+
+Get the mongo db instance running with a docker container.
+
+`docker run -d --name mongo-db -v ~/mongo/data:/data/db -p 27017:27017 mongo`
+
+MongoDB connection string Compass GUI:
+
+`mongodb://localhost:27017`
