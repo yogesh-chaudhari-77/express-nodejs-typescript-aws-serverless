@@ -114,3 +114,11 @@ Get the mongo db instance running with a docker container.
 MongoDB connection string Compass GUI:
 
 `mongodb://localhost:27017`
+
+### Connecting to Redis
+
+[Serverless Redis Provider](https://console.upstash.com/)
+
+Get the redis instance running with a docker container. [Redis DockerHub](https://hub.docker.com/_/redis)
+
+`docker run --name redis-cache -p 6379:6379 -d redis`
