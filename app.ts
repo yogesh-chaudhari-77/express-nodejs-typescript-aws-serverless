@@ -1,8 +1,18 @@
 import express from "express";
-import 'dotenv/config';
-const app = express();
+import { Express } from "express-serve-static-core";
+import mongoose from "mongoose";
+import mongo from "./components/db/mongo";
 
-app.get("/", (req, res, next) => {
+let app: Express;
+
+app = express();
+
+app.get("/", async (req, res, next) => {
+  await mongo.getConnection();
+  await mongoose.connection.db.listCollections().toArray(function (err, names) {
+    console.log(names);
+  });
+
   return res.status(200).json({
     message: "Hello from root!",
   });
